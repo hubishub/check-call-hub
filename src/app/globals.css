@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --fg: #0f172a;
+  --fg-muted: #475569;
+  --fg-subtle: #5b6b80; /* CCH-001 (light): 4.97:1 on sunken */
+  --surface: #f8fafc;
+  --surface-raised: #ffffff;
+  --surface-sunken: #f1f5f9;
+  --border: #e2e8f0;
+  --border-strong: #cbd5e1;
+  --accent: #0f766e;
+  --accent-muted: #ccfbf1;
+  --accent-fg: #ffffff;
+  --danger: #be123c;
+  --danger-muted: #ffe4e6;
+  --warning: #b45309;
+  --warning-muted: #fffbeb;
+  --warning-fg: #92400e;
+  --success: #047857;
+  --success-muted: #d1fae5;
+}
+
+html.dark {
+  color-scheme: dark;
+  --fg: #f1f5f9;
+  --fg-muted: #cbd5e1; /* CCH-001: keep hierarchy above subtle */
+  --fg-subtle: #94a3b8; /* CCH-001: 6.96:1 raised, 5.71:1 sunken */
+  --surface: #020617;
+  --surface-raised: #0f172a;
+  --surface-sunken: #1e293b;
+  --border: #334155;
+  --border-strong: #475569;
+  --accent: #14b8a6;
+  --accent-muted: rgba(20, 184, 166, 0.18);
+  --accent-fg: #042f2e;
+  --danger: #fb7185;
+  --danger-muted: rgba(244, 63, 94, 0.2);
+  --warning: #fbbf24;
+  --warning-muted: rgba(245, 158, 11, 0.12);
+  --warning-fg: #fde68a;
+  --success: #34d399;
+  --success-muted: rgba(16, 185, 129, 0.15);
+}
+
+body {
+  @apply bg-surface text-fg antialiased;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -100px;
+  z-index: 100;
+  border-radius: 0.5rem;
+  background: var(--accent);
+  color: var(--accent-fg);
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+.skip-link:focus {
+  top: 1rem;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.prose-hub h2 {
+  @apply mt-8 mb-3 text-xl font-semibold text-teal-900 dark:text-teal-200;
+}
+.prose-hub p,
+.prose-hub li {
+  @apply text-fg-muted leading-relaxed;
+}
+.prose-hub p + p {
+  @apply mt-3;
+}

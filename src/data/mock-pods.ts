@@ -1,0 +1,58 @@
+import type { PodItem } from "@/lib/types";
+
+export const MOCK_PODS: PodItem[] = [
+  {
+    id: "pod-1",
+    loadId: "load-hou-6677",
+    loadRef: "CCH-6677",
+    fileName: "CCH-6677_POD_front.jpg",
+    status: "received",
+    uploadedAt: "2026-10-04T15:40:00-05:00",
+    notes: "Driver upload via SMS link — awaiting attach to invoice packet.",
+  },
+  {
+    id: "pod-2",
+    loadId: "load-hou-6677",
+    loadRef: "CCH-6677",
+    fileName: "CCH-6677_BOL_signed.pdf",
+    status: "attached",
+    uploadedAt: "2026-10-04T16:05:00-05:00",
+    notes: "Attached to demo invoice folder.",
+  },
+  {
+    id: "pod-3",
+    loadId: "load-zh-4419",
+    loadRef: "CCH-4419",
+    fileName: "CCH-4419_seal_photo.jpg",
+    status: "received",
+    uploadedAt: "2026-10-03T16:20:00-07:00",
+    notes: "Pickup seal photo — delivery POD still pending.",
+  },
+  {
+    id: "pod-4",
+    loadId: "load-sea-3301",
+    loadRef: "CCH-3301",
+    fileName: "CCH-3301_POD_pending.txt",
+    status: "pending",
+    uploadedAt: "2026-10-05T03:00:00-07:00",
+    notes: "Placeholder reminder — delivery not complete.",
+  },
+  {
+    id: "pod-5",
+    loadId: "load-ren-1200",
+    loadRef: "CCH-1200",
+    fileName: "CCH-1200_seal_high_value.jpg",
+    status: "attached",
+    uploadedAt: "2026-10-04T12:15:00-07:00",
+    notes: "High-value seal verification.",
+  },
+  {
+    id: "pod-6",
+    loadId: "load-msp-4488",
+    loadRef: "CCH-4488",
+    fileName: "CCH-4488_damage_note.jpg",
+    status: "rejected",
+    uploadedAt: "2026-10-05T02:10:00-05:00",
+    notes: "Blurry — request re-upload from driver.",
+  },
+];
